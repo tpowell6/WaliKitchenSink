@@ -8,7 +8,7 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-var mailOptions = {
+const mailOptions = {
   from: 'wtmp20@gmail.com',
   to: 'wpowell20@gmail.com',
   subject: 'Sending Email using Node.js',
