@@ -1,10 +1,10 @@
 
 #include <ESP8266WiFi.h>
 
-const char* ssid     = "Tejaswi";
-const char* password = "12345678";
+const char* ssid     = "Rise Resident";
+const char* password = "RiseApache1000";
 
-const char* host = "35.164.210.237";
+const char* host = "35.163.203.114";
 
 
 const int buttonPin = D2; 
