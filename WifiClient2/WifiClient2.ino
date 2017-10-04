@@ -4,7 +4,7 @@
 const char* ssid     = "Rise Resident";
 const char* password = "RiseApache1000";
 
-const char* host = "35.163.203.114";
+const char* host = "35.160.178.102";
 
 
 const int buttonPin = D2; 
