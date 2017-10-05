@@ -8,6 +8,21 @@ var hostname = process.env.HOSTNAME || 'localhost';
 var port = 8080;
 
 
+app.get("/", function (req, res) {
+    console.log("GET req arrived")
+        res.send("hello world")
+});
+
+app.use(methodOverride());
+app.use(bodyParser());
+//app.use(express.static(__dirname + '/public'));
+app.use(errorHandler());
+
+console.log("Simple static server listening at http://" + hostname + ":" + port);
+app.listen(port);
+
+
+
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -30,16 +45,3 @@ transporter.sendMail(mailOptions, function(error, info){
     console.log(info);
   }
 });
-
-app.get("/", function (req, res) {
-    console.log("GET req arrived")
-        res.send("hello world")
-});
-
-app.use(methodOverride());
-app.use(bodyParser());
-//app.use(express.static(__dirname + '/public'));
-app.use(errorHandler());
-
-console.log("Simple static server listening at http://" + hostname + ":" + port);
-app.listen(port);
